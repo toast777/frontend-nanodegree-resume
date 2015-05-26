@@ -1,0 +1,7 @@
+jobs: array of objects with
+employer: string
+title: string
+location: string
+dates: string (works with a hyphen between them)
+description: string
+display: function

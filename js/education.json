@@ -1,0 +1,14 @@
+schools: array of objects with
+name: string
+location: string
+degree: string
+majors: array of strings
+dates: integer (graduation date)
+url: string
+onlineCourses: array with
+title: string
+school: string
+date: integer (date finished)
+url: string
+display: function
+

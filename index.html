@@ -39,20 +39,39 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
   -->
   <script src="js/jQuery.js"></script>
 
-  <!-- More on helper.js in the class -->
+    <!-- More on helper.js in the class -->
   <script src="js/helper.js"></script>
-
-  <!--
-  Uncomment the <script> tag below when you're ready to add an interactive
-  Google Map to your resume!
-  -->
-  <!-- <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places"></script> -->
+    <!-- Bootstrap Framework CSS and JS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <!-- Google Maps API JS -->
+  <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places"></script>
 
   <meta name="viewport" content="width=device-width">
 </head>
-<body unresolved>
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Project name</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div><!--/.nav-collapse -->
+    </div>
+</nav>
+
   <div id="main">
-    Hello world!   <!-- You'll be deleting this line in the course -->
 
     <!--
     Everything from here to the <script> tag below is the skeleton of your
@@ -73,7 +92,8 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
     <div id="education" class='gray'>
       <h2>Education</h2>
     </div>
-    <div id="mapDiv">
+
+      <div id="mapDiv">
       <h2>Where I've Lived and Worked</h2>
     </div>
     <div id="letsConnect" class='dark-gray'>
@@ -81,6 +101,7 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
         <ul id="footerContacts" class="flex-box">
       </ul>
     </div>
+
   </div>
 
   <!--
@@ -115,25 +136,25 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
 
 
     if(document.getElementsByClassName('flex-item').length === 0) {
-      document.getElementById('topContacts').style.display = 'none';
+      document.getElementById('topContacts').style.backgroundColor = "white";
     }
     if(document.getElementsByTagName('h1').length === 0) {
-      document.getElementById('header').style.display = 'none';
+      document.getElementById('header').style.backgroundColor = "black";
     }
     if(document.getElementsByClassName('work-entry').length === 0) {
-      document.getElementById('workExperience').style.display = 'none';
+      document.getElementById('workExperience').style.backgroundColor = "white";
     }
     if(document.getElementsByClassName('project-entry').length === 0) {
-      document.getElementById('projects').style.display = 'none';
+      document.getElementById('projects').style.backgroundColor = "white";
     }
     if(document.getElementsByClassName('education-entry').length === 0) {
-      document.getElementById('education').style.display = 'none';
+      document.getElementById('education').style.backgroundColor = "white";
     }
     if(document.getElementsByClassName('flex-item').length === 0) {
-      document.getElementById('letsConnect').style.display = 'none';
+      document.getElementById('letsConnect').style.backgroundColor = "white";
     }
     if(document.getElementById('map') === null) {
-      document.getElementById('mapDiv').style.display = 'none';
+      document.getElementById('mapDiv').style.backgroundColor = "white";
     }
   </script>
 </body>
