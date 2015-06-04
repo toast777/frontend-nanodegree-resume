@@ -1,21 +1,10 @@
-var bio = {
-    "contacts": [{
-        "name": "Chuck Robinson",
-        "role": "Sys Admin",
-        "contact_info": "chucktherman@gmail.com",
-        "picture": "images/fry.jpg",
-        "welcome_message": "You looking for MEEEEE?",
-        "location": "Kansas City"
-    }],
-    "skills": ["JS", "Python"]
 
-}
 var education = {
     "schools": [
         {
-            "location": "edmond",
-            "major": "Computer Engineering",
-            "gradYear": 20036
+            "location": "San Francisco",
+            "major": "Officer Training Program",
+            "gradYear": 2257
         }]
 };
 
@@ -52,19 +41,8 @@ var projects = {
         }
     ]
 };
-if (bio.skills.length > 0) {
-    var formattedPic = HTMLbioPic.replace("%data%", bio.picture);
-    var formattedName = HTMLheaderName.replace("%data%", bio.name);
-    $("#header").prepend(formattedPic);
-    $("#header").prepend(formattedName);
-    $("#header").append(HTMLskillsStart);
 
-    var formattedSkill1 = HTMLskills.replace("%data%", bio.skills[0]);
-    var formattedSkill2 = HTMLskills.replace("%data%", bio.skills[1]);
 
-    $("#skills").append(formattedSkill2);
-    $("#skills").append(formattedSkill1);
-}
 function displayWork() {
     for (job in work.jobs) {
         $("#workExperience").append(HTMLworkStart);
@@ -98,5 +76,6 @@ projects.display = function () {
 }
 
 }
+bio.display();
 projects.display();
 $("#mapDiv").append(googleMap);
