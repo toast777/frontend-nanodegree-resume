@@ -117,6 +117,7 @@ a {
 /* TODO: Replace with image later */
 #header {
   background-color: #484848;
+	padding-top:100px;
 }
 
 .flex-box {
