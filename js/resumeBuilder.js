@@ -1,12 +1,5 @@
 
-var education = {
-    "schools": [
-        {
-            "location": "San Francisco",
-            "major": "Officer Training Program",
-            "gradYear": 2257
-        }]
-};
+
 
 var work = {
     "jobs": [
@@ -77,5 +70,6 @@ projects.display = function () {
 
 }
 bio.display();
+education.display();
 projects.display();
 $("#mapDiv").append(googleMap);

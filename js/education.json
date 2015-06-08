@@ -1,14 +1,42 @@
-schools: array of objects with
-name: string
-location: string
-degree: string
-majors: array of strings
-dates: integer (graduation date)
-url: string
-onlineCourses: array with
-title: string
-school: string
-date: integer (date finished)
-url: string
-display: function
-
+var education = {
+	"schools": [{
+		"name": "Starfleet Academy",
+    "location": "San Francisco",
+		"degree": "Command",
+		"major": "Officer Training Program",
+		"dates": 2257,
+		"url":"http://acad.sfi.org/"
+	}],
+	"onlineCourses":
+	{
+		"title": "Intergalactic Travel",
+		"school": "Kelvan Empire",
+		"date": 2268,
+		"url":"http://en.memory-alpha.wikia.com/wiki/Andromeda_Galaxy"
+	},
+	display: function() 
+	{
+		$("#education").append(HTMLschoolStart);
+		for (schools in education.schools) {
+			
+			var formattedSchool = HTMLschoolName.replace("%data%", education.schools[schools].name);
+			$("#education").append(formattedSchool);
+			
+			var formattedDegree = HTMLschoolDegree.replace("%data%", education.schools[schools].degree);
+			$("#education").append(formattedDegree);
+		
+			var formattedDates = HTMLschoolDates.replace("%data%", education.schools[schools].dates);
+			$("#education").append(formattedDates);
+			
+			var formattedLocation = HTMLschoolLocation.replace("%data%", education.schools[schools].location);
+			$("#education").append(formattedLocation);
+			
+			var formattedMajor = HTMLschoolMajor.replace("%data%", education.schools[schools].major);
+			$("#education").append(formattedMajor);
+			
+			var formattedMajor = HTMLonlineURL.replace(/data/g, education.schools[schools].url);
+			$("#education").append(formattedMajor);
+			
+		}
+	}
+}
