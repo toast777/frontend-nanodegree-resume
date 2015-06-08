@@ -55,4 +55,4 @@ var education =
       $("#education").append(formattedURL);
     }
   }
-}
+};
