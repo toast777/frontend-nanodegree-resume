@@ -13,14 +13,12 @@ var bio ={
 	"welcomeMessage": "To Boldy Go where no man has gone before",
 	"skills": ["Command", "Red-Shirt Killer", "Time Travel"],
 	display: function () {
-			//Add Header Pic and Name and Role
 		var formattedPic = HTMLbioPic.replace("%data%", bio.biopic);
 		var formattedName = HTMLheaderName.replace("%data%", bio.name);
 		var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
 		$("#header").prepend(formattedRole);
 		$("#header").prepend(formattedPic);
 		$("#header").prepend(formattedName);
-			//Add Contacts
 		var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
 		$("#topContacts").append(formattedMobile);
 		var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
@@ -31,10 +29,8 @@ var bio ={
 		$("#topContacts").append(formattedTwitter);
 		var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
 		$("#topContacts").append(formattedLocation);
-			//Add Welcome Message
 		var formattedMsg = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
 		$("#header").append(formattedMsg);
-			//Add Skills
 		$("#header").append(HTMLskillsStart);
 		for (skills in bio.skills) {
 			var formattedSkill = HTMLskills.replace("%data%", bio.skills[skills]);
